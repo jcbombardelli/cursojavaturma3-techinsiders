@@ -43,14 +43,14 @@ public class EstruturaRepeticao {
         // int produto = multiplicando * multiplicador;
         // System.out.println(multiplicando + " x " + multiplicador + " = " + produto);
         // }
-        int valores[] = new int[10];
-        // String listaDeNomes[] = new String[5];
+        // int valores[] = new int[10];
+        String listaDeNomes[] = new String[5];
 
-        // listaDeNomes[0] = "marcelo";
-        // listaDeNomes[1] = "luciana";
-        // listaDeNomes[2] = "luiz";
-        // listaDeNomes[3] = "marcela";
-        // listaDeNomes[4] = "jc";
+        listaDeNomes[0] = "marcelo";
+        listaDeNomes[1] = "luciana";
+        listaDeNomes[2] = "luiz";
+        listaDeNomes[3] = "marcela";
+        listaDeNomes[4] = "jc";
         // listaDeNomes[5] = "josé"; // --java.lang.ArrayIndexOutOfBoundsException
 
         // System.out.println(listaDeNomes[0]);
