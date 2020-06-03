@@ -1,4 +1,4 @@
-public class Mamifero {
+public abstract class Mamifero {
 
     // Propriedades
     private int patas;
@@ -48,5 +48,9 @@ public class Mamifero {
     // Método Contrutor
     public Mamifero(String sexo) {
         this.sexo = sexo;
+    }
+
+    public Mamifero() {
+
     }
 }
