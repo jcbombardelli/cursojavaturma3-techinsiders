@@ -4,6 +4,10 @@ console.log("Hoje é dia de javascript");
 //var idade = prompt("Digite sua idade");
 //console.log("Minha idade é de: " + idade);
 
+function limpar() {
+    document.getElementById("cpf").value = "";
+}
+
 //função em JS
 function validaCPF() {
     console.log("Chamando Valida CPF");
@@ -80,6 +84,47 @@ function validador(cpf) {
 
 
     return true;
+
+}
+
+function carregarDados() {
+
+    const id = document.getElementById("idperson").value;
+
+    document.getElementById("loading").innerHTML = "Carregando.."
+    console.log("inicio da funçao carregar dados")
+    //Verbos HTTP
+    // GET --> Recuperar itens
+    // POST --> Enviar novos itens
+    // PUT --> Atualizacao de itens pre existentes
+    // DELETE --> Remove itens existentes
+    const options = {
+        method: "GET"
+    }
+
+    //const url = "https://swapi.dev/api/people/" + id + "/";
+    const url = `https://swapi.dev/api/people/${id}/`;
+
+    fetch(url, options)
+        .then(function (response) {
+            if (response.status == 200) {
+                document.getElementById("loading").innerHTML = "";
+
+                response.json()
+                    .then(function (json) {
+                        document.getElementById("nome").innerHTML = json.name
+                    })
+                    .catch(function (err) {
+                        console.error(err)
+                    })
+
+            }
+        })
+        .catch(function (error) {
+            console.error(error)
+        })
+
+    console.log("final da funçao carregar dados")
 
 }
 
