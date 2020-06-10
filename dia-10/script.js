@@ -81,8 +81,6 @@ function validador(cpf) {
     else {
         return false;
     }
-
-
     return true;
 
 }
