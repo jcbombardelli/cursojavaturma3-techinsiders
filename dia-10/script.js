@@ -102,6 +102,7 @@ function carregarDados() {
 
     //const url = "https://swapi.dev/api/people/" + id + "/";
     const url = `https://swapi.dev/api/people/${id}/`;
+    //http://localhost:8080/pessoas/1
 
     fetch(url, options)
         .then(function (response) {
